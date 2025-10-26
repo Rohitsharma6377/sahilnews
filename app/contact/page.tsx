@@ -11,6 +11,15 @@ export default function ContactPage() {
   return (
     <>
       <Header />
+      <section className="bg-gradient-to-r from-emerald-50 to-sky-50 dark:from-slate-900 dark:to-slate-800">
+        <div className="container py-10">
+          <h1 className="font-heading text-4xl">Get in touch</h1>
+          <p className="mt-2 text-slate-600 dark:text-slate-300 max-w-2xl">
+            Questions, feedback, or partnership ideas? Reach out—we read every
+            message.
+          </p>
+        </div>
+      </section>
       <Breadcrumbs
         items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]}
       />

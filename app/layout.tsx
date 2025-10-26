@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import clsx from 'clsx'
 import { Analytics } from '@/lib/analytics'
 import { TopBar } from '@/components/TopBar'
+import { BottomBar } from '@/components/BottomBar'
 
 export const metadata: Metadata = {
   title: {
@@ -23,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body
         className={clsx(
-          'min-h-screen bg-base-bg text-base-fg antialiased',
+          'min-h-screen bg-base-bg text-base-fg antialiased pb-16',
           'selection:bg-base-accent/20 selection:text-base-fg'
         )}
       >
@@ -31,6 +32,8 @@ export default function RootLayout({
         <TopBar />
         {children}
         <Analytics />
+        {/* fixed bottom bar */}
+        <BottomBar />
       </body>
     </html>
   )

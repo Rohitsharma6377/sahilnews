@@ -2,18 +2,14 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, Search, X } from 'lucide-react'
+import { Logo } from '@/components/Logo'
 
 export function Header() {
   const [open, setOpen] = useState(false)
   return (
     <header className="sticky top-0 z-40 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/50 border-b">
       <div className="container flex h-14 items-center gap-4">
-        <Link
-          href="/"
-          className="font-heading text-xl font-bold whitespace-nowrap"
-        >
-          SahilNews
-        </Link>
+        <Logo />
         <form
           action="/search"
           className="hidden md:flex flex-1 items-center max-w-xl"

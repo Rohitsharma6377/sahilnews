@@ -25,3 +25,10 @@
     transform: translateX(-50%);
   }
 }
+
+/* Thumbnail ticker (TopMedia) */
+.thumb-ticker {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker-move 25s linear infinite;
+}

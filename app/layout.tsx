@@ -13,6 +13,26 @@ export const metadata: Metadata = {
   description:
     'A modern, performant news & blogs platform built with Next.js, Tailwind, and Prisma.',
   metadataBase: new URL('http://localhost:3000'),
+  keywords: ['news', 'technology', 'business', 'world', 'SahilNews', 'blogs'],
+  openGraph: {
+    type: 'website',
+    siteName: 'SahilNews',
+    title: 'SahilNews — Modern News & Blogs',
+    description:
+      'A modern, performant news & blogs platform built with Next.js, Tailwind, and Prisma.',
+    url: 'http://localhost:3000',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SahilNews — Modern News & Blogs',
+    description:
+      'A modern, performant news & blogs platform built with Next.js, Tailwind, and Prisma.',
+    creator: '@sahilnews',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({

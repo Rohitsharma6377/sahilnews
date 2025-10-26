@@ -28,7 +28,7 @@ export async function TopBar() {
           <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-emerald-50/70 to-transparent dark:from-slate-900/50" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-emerald-50/70 to-transparent dark:from-slate-900/50" />
         </div>
-        <TopMedia thumbs={list as any} />
+        <TopMedia thumbs={list as any} showVideo={false} />
       </div>
     </div>
   )

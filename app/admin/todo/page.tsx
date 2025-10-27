@@ -2,10 +2,11 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
 import { AdminLogin } from '@/components/auth/AdminLogin'
 import { SignOutButton } from '@/components/auth/SignOutButton'
+import { AdminProviders } from '@/lib/rtk/Providers'
 import { AdminDashboard } from '@/components/admin/AdminDashboard'
-import { AdminShell } from '@/components/admin/AdminShell'
+import { SetAdminSection } from '@/components/admin/SetAdminSection'
 
-export default async function AdminPage() {
+export default async function AdminTodoPage() {
   const session = await getServerSession(authOptions)
   if (!session) {
     return (
@@ -17,16 +18,17 @@ export default async function AdminPage() {
   }
 
   return (
-    <AdminShell>
-      <main className="container py-6">
-        <div className="flex items-center justify-between">
-          <h1 className="font-heading text-2xl sm:text-3xl">Admin Dashboard</h1>
-          <SignOutButton />
-        </div>
-        <div className="mt-6">
+    <main className="container py-8">
+      <div className="flex items-center justify-between">
+        <h1 className="font-heading text-3xl">Todo</h1>
+        <SignOutButton />
+      </div>
+      <div className="mt-6">
+        <AdminProviders>
+          <SetAdminSection section="articles" />
           <AdminDashboard />
-        </div>
-      </main>
-    </AdminShell>
+        </AdminProviders>
+      </div>
+    </main>
   )
 }

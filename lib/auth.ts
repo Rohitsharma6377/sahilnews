@@ -1,5 +1,8 @@
 import type { NextAuthOptions } from 'next-auth'
 import Credentials from 'next-auth/providers/credentials'
+import { dbConnect } from '@/lib/db/mongoose'
+import { UserModel } from '@/lib/models/User'
+import bcrypt from 'bcryptjs'
 
 export const authOptions: NextAuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
@@ -15,6 +18,25 @@ export const authOptions: NextAuthOptions = {
       async authorize(credentials) {
         const adminEmail = process.env.ADMIN_EMAIL
         const adminPassword = process.env.ADMIN_PASSWORD
+
+        if (credentials?.email && credentials?.password) {
+          try {
+            await dbConnect()
+            const user = await UserModel.findOne({ email: credentials.email })
+            if (
+              user &&
+              (await bcrypt.compare(credentials.password, user.passwordHash))
+            ) {
+              return {
+                id: String(user._id),
+                name: user.name,
+                email: user.email,
+                role: (user.role as any) || 'user',
+              }
+            }
+          } catch {}
+        }
+
         if (
           credentials?.email === adminEmail &&
           credentials?.password === adminPassword

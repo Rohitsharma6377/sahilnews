@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <main className="bg-gradient-to-b from-sky-50 to-orange-50 dark:from-slate-900 dark:to-slate-800">
+      <main className="bg-gradient-to-b from-brand-lightBlue/10 to-orange-50 dark:from-slate-900 dark:to-slate-800">
         <section className="container py-14">
           <div className="max-w-3xl">
             <h1 className="font-heading text-4xl">About FlashNews</h1>

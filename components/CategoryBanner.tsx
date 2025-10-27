@@ -85,7 +85,7 @@ export function CategoryBanner({
                   sizes="100vw"
                 />
               ) : (
-                <div className="h-full w-full bg-gradient-to-br from-sky-200 to-orange-200" />
+                <div className="h-full w-full bg-gradient-to-br from-brand-lightBlue/30 to-brand-orange/30" />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">

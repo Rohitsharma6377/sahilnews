@@ -7,12 +7,13 @@ export function Logo({ size = 22 }: { size?: number }) {
     <Link href="/" className="inline-flex items-center gap-2 select-none">
       <Image
         src={LogoImg}
-        alt="FlashNews logo"
+        alt="SahilNews logo"
         priority
-        style={{ height: size, width: 'auto' }}
+        height={size}
+        width={Math.max(1, Math.round((LogoImg.width / LogoImg.height) * size))}
       />
       <span className="font-heading text-xl font-bold leading-none">
-        FlashNews
+        SahilNews
       </span>
     </Link>
   )

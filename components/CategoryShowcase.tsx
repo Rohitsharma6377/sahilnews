@@ -15,7 +15,7 @@ function Tile({ a, tall = false }: { a: ArticleLite; tall?: boolean }) {
       }
     >
       {/* gradient hover ring */}
-      <span className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-orange-400/20 to-sky-400/20 opacity-0 transition group-hover:opacity-100" />
+      <span className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-orange/20 to-brand-lightBlue/20 opacity-0 transition group-hover:opacity-100" />
 
       <div className="relative z-[1] flex items-start gap-3">
         <div className="relative h-9 w-9 overflow-hidden rounded-lg">

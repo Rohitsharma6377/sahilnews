@@ -12,8 +12,14 @@ export default {
       colors: {
         base: {
           bg: '#E6F0FF',
-          fg: '#F5991F',
+          fg: '#F97316',
           accent: '#F97316',
+        },
+        brand: {
+          orange: '#F97316',
+          red: '#EF4444',
+          blue: '#1E3A8A',
+          lightBlue: '#60A5FA',
         },
       },
       fontFamily: {

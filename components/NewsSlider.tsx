@@ -28,7 +28,7 @@ export function NewsSlider({ items }: { items: SliderItem[] }) {
 
   return (
     <section className="container mt-8">
-      <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-sky-100 to-orange-100 dark:from-slate-800 dark:to-slate-700 p-4 md:p-6">
+      <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-brand-lightBlue/20 to-brand-orange/10 dark:from-slate-800 dark:to-slate-700 p-4 md:p-6">
         <AnimatePresence mode="popLayout" initial={false}>
           <motion.div
             key={current.slug}
@@ -71,7 +71,7 @@ export function NewsSlider({ items }: { items: SliderItem[] }) {
                   className="object-cover transition-transform duration-500 will-change-transform hover:scale-[1.02]"
                 />
               ) : (
-                <div className="h-full w-full bg-gradient-to-br from-sky-200 to-orange-200" />
+                <div className="h-full w-full bg-gradient-to-br from-brand-lightBlue/30 to-brand-orange/30" />
               )}
             </div>
           </motion.div>

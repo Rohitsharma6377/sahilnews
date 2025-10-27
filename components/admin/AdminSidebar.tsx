@@ -24,7 +24,7 @@ export function AdminSidebar() {
               dispatch(setSection(s.key))
               dispatch(fetchEntities())
             }}
-            className={`w-full text-left rounded px-3 py-2 ${current === s.key ? 'bg-emerald-50 text-emerald-700' : 'hover:bg-black/5'}`}
+            className={`w-full text-left rounded px-3 py-2 ${current === s.key ? 'bg-base-accent/10 text-base-accent' : 'hover:bg-black/5'}`}
           >
             {s.label}
           </button>

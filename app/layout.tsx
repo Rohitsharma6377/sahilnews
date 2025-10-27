@@ -6,27 +6,27 @@ import { BottomBar } from '@/components/BottomBar'
 
 export const metadata: Metadata = {
   title: {
-    default: 'SahilNews — Modern News & Blogs',
-    template: '%s | SahilNews',
+    default: 'FlashNews — Modern News & Blogs',
+    template: '%s | FlashNews',
   },
   description:
     'A modern, performant news & blogs platform built with Next.js, Tailwind, and Prisma.',
   metadataBase: new URL('http://localhost:3000'),
-  keywords: ['news', 'technology', 'business', 'world', 'SahilNews', 'blogs'],
+  keywords: ['news', 'technology', 'business', 'world', 'FlashNews', 'blogs'],
   openGraph: {
     type: 'website',
-    siteName: 'SahilNews',
-    title: 'SahilNews — Modern News & Blogs',
+    siteName: 'FlashNews',
+    title: 'FlashNews — Modern News & Blogs',
     description:
       'A modern, performant news & blogs platform built with Next.js, Tailwind, and Prisma.',
     url: 'http://localhost:3000',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SahilNews — Modern News & Blogs',
+    title: 'FlashNews — Modern News & Blogs',
     description:
       'A modern, performant news & blogs platform built with Next.js, Tailwind, and Prisma.',
-    creator: '@sahilnews',
+    creator: '@FlashNews',
   },
   robots: {
     index: true,

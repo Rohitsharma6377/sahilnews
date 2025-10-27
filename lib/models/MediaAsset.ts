@@ -9,7 +9,7 @@ const MediaAssetSchema = new Schema(
     bytes: { type: Number },
     width: { type: Number },
     height: { type: Number },
-    folder: { type: String, default: 'sahilnews' },
+    folder: { type: String, default: 'FlashNews' },
   },
   { timestamps: true }
 )

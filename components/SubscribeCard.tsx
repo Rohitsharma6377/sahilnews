@@ -11,7 +11,7 @@ export function SubscribeCard() {
           placeholder="you@example.com"
           className="flex-1 rounded-md border px-3 py-2"
         />
-        <button className="w-full sm:w-auto rounded-md bg-emerald-500 px-4 py-2 text-white hover:bg-emerald-600">
+        <button className="w-full sm:w-auto rounded-md bg-base-accent px-4 py-2 text-white hover:opacity-90">
           Join
         </button>
       </form>

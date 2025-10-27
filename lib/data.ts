@@ -324,8 +324,8 @@ function buildArticles(): Article[] {
   // Add a few special tech posts
   list.unshift(
     make({
-      title: 'Introducing SahilNews',
-      slug: 'introducing-SahilNews',
+      title: 'Introducing FlashNews',
+      slug: 'introducing-FlashNews',
       category: 'technology',
       featured: true,
     }),

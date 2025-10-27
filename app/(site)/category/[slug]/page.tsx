@@ -63,7 +63,7 @@ export default async function CategoryPage({
                   <a
                     key={t}
                     href={`/tags/${t}`}
-                    className="rounded-full border px-3 py-1 text-xs hover:border-emerald-500 hover:text-emerald-600"
+                    className="rounded-full border px-3 py-1 text-xs hover:border-base-accent hover:text-base-accent"
                   >
                     #{t}
                   </a>

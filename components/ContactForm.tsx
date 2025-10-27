@@ -40,7 +40,7 @@ export function ContactForm() {
           className="min-h-[120px] rounded-md border px-3 py-2"
         />
       </div>
-      <button className="w-fit rounded-md bg-emerald-500 px-4 py-2 text-white hover:bg-emerald-600">
+      <button className="w-fit rounded-md bg-base-accent px-4 py-2 text-white hover:opacity-90">
         Send
       </button>
     </form>

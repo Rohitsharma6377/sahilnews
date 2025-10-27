@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     const url = body?.url as string | undefined
     if (!url) return NextResponse.json({ error: 'invalid' }, { status: 400 })
     const res = await cloudinary.uploader.upload(url, {
-      folder: 'sahilnews',
+      folder: 'FlashNews',
       resource_type: 'auto',
     })
     await dbConnect()
@@ -35,7 +35,7 @@ export async function POST(req: Request) {
           bytes: res.bytes,
           width: (res as any).width,
           height: (res as any).height,
-          folder: (res as any).folder || 'sahilnews',
+          folder: (res as any).folder || 'FlashNews',
         },
       },
       { upsert: true }
@@ -50,7 +50,7 @@ export async function POST(req: Request) {
     const buffer = Buffer.from(arrayBuffer)
     const res = await new Promise<any>((resolve, reject) => {
       const stream = cloudinary.uploader.upload_stream(
-        { folder: 'sahilnews', resource_type: 'auto' },
+        { folder: 'FlashNews', resource_type: 'auto' },
         (err, result) => {
           if (err) reject(err)
           else resolve(result)
@@ -70,7 +70,7 @@ export async function POST(req: Request) {
           bytes: res.bytes,
           width: (res as any).width,
           height: (res as any).height,
-          folder: (res as any).folder || 'sahilnews',
+          folder: (res as any).folder || 'FlashNews',
         },
       },
       { upsert: true }

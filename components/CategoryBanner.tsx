@@ -85,7 +85,7 @@ export function CategoryBanner({
                   sizes="100vw"
                 />
               ) : (
-                <div className="h-full w-full bg-gradient-to-br from-sky-200 to-emerald-200" />
+                <div className="h-full w-full bg-gradient-to-br from-sky-200 to-orange-200" />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
@@ -95,7 +95,7 @@ export function CategoryBanner({
                 <h3 className="max-w-3xl font-heading text-2xl md:text-3xl text-white drop-shadow">
                   <Link
                     href={`/articles/${cur.slug}`}
-                    className="hover:text-emerald-200"
+                    className="hover:text-base-accent"
                   >
                     {cur.title}
                   </Link>

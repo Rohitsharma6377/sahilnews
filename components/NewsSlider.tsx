@@ -28,7 +28,7 @@ export function NewsSlider({ items }: { items: SliderItem[] }) {
 
   return (
     <section className="container mt-8">
-      <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-sky-100 to-emerald-100 dark:from-slate-800 dark:to-slate-700 p-4 md:p-6">
+      <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-sky-100 to-orange-100 dark:from-slate-800 dark:to-slate-700 p-4 md:p-6">
         <AnimatePresence mode="popLayout" initial={false}>
           <motion.div
             key={current.slug}
@@ -42,7 +42,7 @@ export function NewsSlider({ items }: { items: SliderItem[] }) {
               <h3 className="font-heading text-2xl md:text-3xl leading-tight">
                 <Link
                   href={`/articles/${current.slug}`}
-                  className="hover:text-emerald-600"
+                  className="hover:text-base-accent"
                 >
                   {current.title}
                 </Link>
@@ -55,7 +55,7 @@ export function NewsSlider({ items }: { items: SliderItem[] }) {
               <div className="mt-4">
                 <Link
                   href={`/articles/${current.slug}`}
-                  className="inline-flex items-center rounded-md bg-emerald-500 px-4 py-2 text-white hover:bg-emerald-600"
+                  className="inline-flex items-center rounded-md bg-base-accent px-4 py-2 text-white hover:opacity-90"
                 >
                   Read now
                 </Link>
@@ -71,7 +71,7 @@ export function NewsSlider({ items }: { items: SliderItem[] }) {
                   className="object-cover transition-transform duration-500 will-change-transform hover:scale-[1.02]"
                 />
               ) : (
-                <div className="h-full w-full bg-gradient-to-br from-sky-200 to-emerald-200" />
+                <div className="h-full w-full bg-gradient-to-br from-sky-200 to-orange-200" />
               )}
             </div>
           </motion.div>
@@ -81,7 +81,7 @@ export function NewsSlider({ items }: { items: SliderItem[] }) {
           {slides.map((_, i) => (
             <span
               key={i}
-              className={`h-1.5 w-6 rounded-full ${i === index ? 'bg-emerald-600' : 'bg-emerald-300/70'}`}
+              className={`h-1.5 w-6 rounded-full ${i === index ? 'bg-base-accent' : 'bg-base-accent/50'}`}
             />
           ))}
         </div>

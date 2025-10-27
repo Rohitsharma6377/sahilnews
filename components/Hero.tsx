@@ -106,7 +106,7 @@ export function Hero({
               className={`mt-4 text-lg max-w-2xl ${cur ? 'text-white/90' : 'text-slate-600'}`}
             >
               {cur?.excerpt ||
-                'SahilNews delivers featured stories, expert opinions, and the latest updates across technology, business, and the world.'}
+                'FlashNews delivers featured stories, expert opinions, and the latest updates across technology, business, and the world.'}
             </p>
           </motion.div>
         </AnimatePresence>
@@ -114,7 +114,7 @@ export function Hero({
         <div className="mt-6 flex flex-wrap gap-3">
           <a
             href="#newsletter"
-            className={`inline-flex items-center w-full sm:w-auto justify-center rounded-md px-4 py-2 text-white shadow-card ${cur ? 'bg-emerald-600 hover:bg-emerald-500' : 'bg-base-accent'}`}
+            className={`inline-flex items-center w-full sm:w-auto justify-center rounded-md px-4 py-2 text-white shadow-card ${cur ? 'bg-base-accent hover:opacity-90' : 'bg-base-accent'}`}
           >
             Subscribe
           </a>

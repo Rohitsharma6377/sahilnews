@@ -40,7 +40,7 @@ export function SidebarList({
             <div className="min-w-0">
               <Link
                 href={`/articles/${a.slug}`}
-                className="line-clamp-2 font-medium hover:text-emerald-600"
+                className="line-clamp-2 font-medium hover:text-base-accent"
               >
                 {a.title}
               </Link>

@@ -1,4 +1,4 @@
-# SahilNews — Full-Stack News & Blogs (Next.js + Tailwind + Mongoose + NextAuth)
+# FlashNews — Full-Stack News & Blogs (Next.js + Tailwind + Mongoose + NextAuth)
 
 ## Quick start
 

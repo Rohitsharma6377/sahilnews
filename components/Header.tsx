@@ -18,7 +18,7 @@ export function Header() {
             <input
               name="q"
               placeholder="Search articles..."
-              className="w-full rounded-full border bg-white/80 pl-10 pr-4 py-2 shadow-sm outline-none focus:ring-2 focus:ring-emerald-300"
+              className="w-full rounded-full border bg-white/80 pl-10 pr-4 py-2 shadow-sm outline-none focus:ring-2 focus:ring-base-accent/40"
             />
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
           </div>

@@ -10,16 +10,14 @@ export function BottomBar() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 border-t bg-white/90 backdrop-blur dark:bg-slate-900/80">
       <div className="container flex items-center justify-center gap-3 py-1.5">
-        <span className="text-xs font-semibold text-emerald-700 dark:text-emerald-300">
-          Trending
-        </span>
+        <span className="text-xs font-semibold text-base-accent">Trending</span>
         <div className="relative flex-1 max-w-3xl overflow-hidden">
           <div className="ticker">
             {doubled.map((a, i) => (
               <Link
                 key={`${a.slug}-b-${i}`}
                 href={`/articles/${a.slug}`}
-                className="mr-6 inline-block text-[13px] hover:text-emerald-700"
+                className="mr-6 inline-block text-[13px] hover:text-base-accent"
               >
                 {a.title}
               </Link>

@@ -62,7 +62,7 @@ export function TopMedia({
                     <div className="h-full w-full bg-slate-200" />
                   )}
                 </div>
-                <span className="text-[11px] text-slate-700 hover:text-emerald-700 line-clamp-1 max-w-[180px]">
+                <span className="text-[11px] text-slate-700 hover:text-base-accent line-clamp-1 max-w-[180px]">
                   {a.title}
                 </span>
               </Link>

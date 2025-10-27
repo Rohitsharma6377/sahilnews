@@ -30,6 +30,7 @@ export function SidebarList({
                   src={a.featuredImage.url}
                   alt={a.title}
                   fill
+                  sizes="96px"
                   className="object-cover"
                 />
               ) : (

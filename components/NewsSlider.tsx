@@ -67,6 +67,7 @@ export function NewsSlider({ items }: { items: SliderItem[] }) {
                   alt={current.title}
                   src={current.featuredImage.url}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-500 will-change-transform hover:scale-[1.02]"
                 />
               ) : (

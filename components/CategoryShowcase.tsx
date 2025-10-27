@@ -83,7 +83,7 @@ export function CategoryShowcase({ articles }: { articles: ArticleLite[] }) {
   return (
     <section className="container mt-10">
       <h2 className="font-heading text-2xl">Explore by category</h2>
-      <div className="mt-4 grid auto-rows-[170px] gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-4 grid auto-rows-[200px] sm:auto-rows-[170px] gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {a0 && <Tile a={a0} />}
         {a1 && <Tile a={a1} tall />}
         {a2 && <Tile a={a2} />}

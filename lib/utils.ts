@@ -1,3 +1,6 @@
+import { type ClassValue, clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
+
 export function slugify(input: string) {
   return input
     .toLowerCase()
@@ -11,4 +14,8 @@ export function formatDate(date: string | Date) {
     month: 'short',
     day: 'numeric',
   })
+}
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
 }

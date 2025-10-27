@@ -10,6 +10,7 @@ import { ArticleCard } from '@/components/ArticleCard'
 import { Comments } from '@/components/Comments'
 import { AnimatedIn } from '@/components/AnimatedIn'
 import { SubscribeCard } from '@/components/SubscribeCard'
+import { TopBar } from '@/components/TopBar'
 
 export async function generateMetadata({
   params,
@@ -42,6 +43,7 @@ export default async function ArticlePage({
   return (
     <>
       <Header />
+      <TopBar />
       <Breadcrumbs
         items={[
           { label: 'Home', href: '/' },
@@ -50,7 +52,7 @@ export default async function ArticlePage({
         ]}
       />
       <div className="container py-6 grid gap-8 lg:grid-cols-12">
-        <article className="prose prose-slate lg:prose-lg lg:col-span-8">
+        <article className="prose prose-slate lg:prose-lg lg:col-span-8 max-w-none break-words">
           <AnimatedIn>
             <h1>{a.title}</h1>
           </AnimatedIn>
@@ -61,6 +63,7 @@ export default async function ArticlePage({
                   src={a.featuredImage.url}
                   alt={a.title}
                   fill
+                  sizes="100vw"
                   className="object-cover rounded-lg"
                 />
               </div>

@@ -5,6 +5,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { ArticleCard } from '@/components/ArticleCard'
 import { SidebarList } from '@/components/SidebarList'
 import { CategoryBanner } from '@/components/CategoryBanner'
+import { TopBar } from '@/components/TopBar'
 
 export default async function TagPage({
   params,
@@ -16,6 +17,7 @@ export default async function TagPage({
   return (
     <>
       <Header />
+      <TopBar />
       <Breadcrumbs
         items={[{ label: 'Home', href: '/' }, { label: `#${tag}` }]}
       />

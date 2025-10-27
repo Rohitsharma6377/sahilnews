@@ -19,8 +19,29 @@ export function Footer() {
             <div className="font-semibold">Sections</div>
             <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
               <li>
-                <a href="/category/world" className="hover:text-emerald-600">
-                  World
+                <a href="/category/national" className="hover:text-emerald-600">
+                  National
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/category/international"
+                  className="hover:text-emerald-600"
+                >
+                  International
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/category/state-news"
+                  className="hover:text-emerald-600"
+                >
+                  State News
+                </a>
+              </li>
+              <li>
+                <a href="/category/sports" className="hover:text-emerald-600">
+                  Sports
                 </a>
               </li>
               <li>
@@ -32,18 +53,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/category/business" className="hover:text-emerald-600">
-                  Business
-                </a>
-              </li>
-              <li>
-                <a href="/category/sports" className="hover:text-emerald-600">
-                  Sports
-                </a>
-              </li>
-              <li>
-                <a href="/category/science" className="hover:text-emerald-600">
-                  Science
+                <a
+                  href="/category/lifestyle"
+                  className="hover:text-emerald-600"
+                >
+                  Lifestyle
                 </a>
               </li>
               <li>
@@ -52,6 +66,11 @@ export function Footer() {
                   className="hover:text-emerald-600"
                 >
                   Entertainment
+                </a>
+              </li>
+              <li>
+                <a href="/category/videos" className="hover:text-emerald-600">
+                  Videos
                 </a>
               </li>
             </ul>
@@ -86,14 +105,14 @@ export function Footer() {
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
               Monthly digest of our best stories.
             </p>
-            <form className="mt-3 flex gap-2">
+            <form className="mt-3 flex flex-col sm:flex-row gap-2">
               <input
                 aria-label="Email"
                 type="email"
                 placeholder="you@example.com"
                 className="flex-1 rounded-md border px-3 py-2"
               />
-              <button className="rounded-md bg-emerald-500 px-4 py-2 text-white hover:bg-emerald-600">
+              <button className="w-full sm:w-auto rounded-md bg-emerald-500 px-4 py-2 text-white hover:bg-emerald-600">
                 Join
               </button>
             </form>

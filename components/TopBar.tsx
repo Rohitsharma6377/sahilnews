@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import { dbGetLatest } from '@/lib/repo/articles'
+import { getLatest } from '@/lib/data'
 import { TopMedia } from '@/components/TopMedia'
 
-export async function TopBar() {
-  const items = await dbGetLatest()
+export function TopBar() {
+  const items = getLatest()
   const list = (items || []).slice(0, 10)
   if (!list.length) return null
   const doubled = [...list, ...list]

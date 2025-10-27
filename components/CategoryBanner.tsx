@@ -8,6 +8,10 @@ export type BannerItem = {
   slug: string
   title: string
   featuredImage?: { url?: string }
+  /** Optional YouTube video ID for video slides */
+  videoId?: string
+  /** Optional MP4 video URL for video slides */
+  videoUrl?: string
 }
 
 export function CategoryBanner({
@@ -27,12 +31,13 @@ export function CategoryBanner({
 
   if (!slides.length) return null
   const cur = slides[i]
+  const isVideo = !!(cur.videoId || cur.videoUrl)
 
   return (
     <section className="mt-6">
       <div className="relative overflow-hidden rounded-2xl">
         {/* smoky blurred background */}
-        {cur.featuredImage?.url && (
+        {cur.featuredImage?.url && !isVideo && (
           <div className="absolute inset-0 -z-10">
             <Image
               src={cur.featuredImage.url}
@@ -50,9 +55,28 @@ export function CategoryBanner({
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.98 }}
               transition={{ duration: 0.45 }}
-              className="relative aspect-[16/6] w-full overflow-hidden"
+              className="relative aspect-[16/9] md:aspect-[16/6] w-full overflow-hidden"
             >
-              {cur.featuredImage?.url ? (
+              {isVideo ? (
+                cur.videoId ? (
+                  <iframe
+                    className="h-full w-full"
+                    src={`https://www.youtube.com/embed/${cur.videoId}?autoplay=1&mute=1&controls=0&rel=0&playsinline=1&modestbranding=1&loop=1&playlist=${cur.videoId}`}
+                    title={cur.title}
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : cur.videoUrl ? (
+                  <video
+                    className="h-full w-full object-cover"
+                    src={cur.videoUrl}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+                ) : null
+              ) : cur.featuredImage?.url ? (
                 <Image
                   src={cur.featuredImage.url}
                   alt={cur.title}
@@ -80,11 +104,11 @@ export function CategoryBanner({
             </motion.div>
           </AnimatePresence>
           {/* dots */}
-          <div className="absolute inset-x-0 bottom-2 flex justify-center gap-2">
+          <div className="absolute inset-x-0 bottom-2 flex justify-center gap-2 px-2 overflow-hidden">
             {slides.map((_, idx) => (
               <span
                 key={idx}
-                className={`h-1.5 w-6 rounded-full ${idx === i ? 'bg-white' : 'bg-white/50'}`}
+                className={`h-1.5 w-4 md:w-6 rounded-full ${idx === i ? 'bg-white' : 'bg-white/50'}`}
               />
             ))}
           </div>

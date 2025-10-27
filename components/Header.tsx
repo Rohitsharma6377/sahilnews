@@ -8,7 +8,7 @@ export function Header() {
   const [open, setOpen] = useState(false)
   return (
     <header className="sticky top-0 z-40 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/50 border-b">
-      <div className="container flex h-14 items-center gap-4">
+      <div className="container flex h-14 items-center justify-between gap-4">
         <Logo />
         <form
           action="/search"
@@ -24,14 +24,35 @@ export function Header() {
           </div>
         </form>
         <nav className="hidden md:flex gap-6 text-sm ml-auto">
-          <Link href="/category/world" className="hover:text-base-accent">
-            World
+          <Link href="/category/national" className="hover:text-base-accent">
+            National
+          </Link>
+          <Link
+            href="/category/international"
+            className="hover:text-base-accent"
+          >
+            International
+          </Link>
+          <Link href="/category/state-news" className="hover:text-base-accent">
+            State News
+          </Link>
+          <Link href="/category/sports" className="hover:text-base-accent">
+            Sports
           </Link>
           <Link href="/category/technology" className="hover:text-base-accent">
             Technology
           </Link>
-          <Link href="/category/business" className="hover:text-base-accent">
-            Business
+          <Link href="/category/lifestyle" className="hover:text-base-accent">
+            Lifestyle
+          </Link>
+          <Link
+            href="/category/entertainment"
+            className="hover:text-base-accent"
+          >
+            Entertainment
+          </Link>
+          <Link href="/category/videos" className="hover:text-base-accent">
+            Videos
           </Link>
           <Link href="/about" className="hover:text-base-accent">
             About
@@ -75,11 +96,32 @@ export function Header() {
             </form>
             <nav className="mt-4 grid gap-2 text-sm">
               <Link
-                href="/category/world"
+                href="/category/national"
                 onClick={() => setOpen(false)}
                 className="rounded px-2 py-2 hover:bg-black/5"
               >
-                World
+                National
+              </Link>
+              <Link
+                href="/category/international"
+                onClick={() => setOpen(false)}
+                className="rounded px-2 py-2 hover:bg-black/5"
+              >
+                International
+              </Link>
+              <Link
+                href="/category/state-news"
+                onClick={() => setOpen(false)}
+                className="rounded px-2 py-2 hover:bg-black/5"
+              >
+                State News
+              </Link>
+              <Link
+                href="/category/sports"
+                onClick={() => setOpen(false)}
+                className="rounded px-2 py-2 hover:bg-black/5"
+              >
+                Sports
               </Link>
               <Link
                 href="/category/technology"
@@ -89,11 +131,25 @@ export function Header() {
                 Technology
               </Link>
               <Link
-                href="/category/business"
+                href="/category/lifestyle"
                 onClick={() => setOpen(false)}
                 className="rounded px-2 py-2 hover:bg-black/5"
               >
-                Business
+                Lifestyle
+              </Link>
+              <Link
+                href="/category/entertainment"
+                onClick={() => setOpen(false)}
+                className="rounded px-2 py-2 hover:bg-black/5"
+              >
+                Entertainment
+              </Link>
+              <Link
+                href="/category/videos"
+                onClick={() => setOpen(false)}
+                className="rounded px-2 py-2 hover:bg-black/5"
+              >
+                Videos
               </Link>
               <Link
                 href="/about"
